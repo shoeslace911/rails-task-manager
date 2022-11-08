@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="text-center my-5">Your tasks</h1>
+  <div>
+      <% @tasks.each do |task| %>
+        <p><%= link_to task.title, task_path(task) %>
+        <%= link_to "🗑️",  destroy_path %></p>
+      <% end %>
+    <h5><%= link_to "Make New Task", new_task_path %></h5>
+  </div>
+</div>
